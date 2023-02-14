@@ -23,8 +23,38 @@ export default function Home() {
           <a href="/about-us">About Us</a>
         </nav>
       </header>
-      <main className={styles.main}></main>
-      <footer className={styles.footer}></footer>
+      <main className={styles.main}>
+        <a href="">
+          <img />
+          <h2>Events in London</h2>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore ex
+            magnam nesciunt dicta enim amet tempora incidunt, eius laudantium
+            consequuntur!
+          </p>
+        </a>
+        <a href="">
+          <img />
+          <h2>Events in San Francisco</h2>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore ex
+            magnam nesciunt dicta enim amet tempora incidunt, eius laudantium
+            consequuntur!
+          </p>
+        </a>
+        <a href="">
+          <img />
+          <h2>Events in Barcelona</h2>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore ex
+            magnam nesciunt dicta enim amet tempora incidunt, eius laudantium
+            consequuntur!
+          </p>
+        </a>
+      </main>
+      <footer className={styles.footer}>
+        <p> © 2023 Events Page</p>
+      </footer>
     </>
   );
 }
