@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const HomePage = ({ data }) => {
   return (
-    <main>
+    <div className="home_body">
       {data.map((ev) => (
         <Link key={ev.id} href={`/events/${ev.id}`} passHref>
           <Image width={300} height={300} alt={ev.title} src={ev.image} />
@@ -11,6 +11,6 @@ export const HomePage = ({ data }) => {
           <p>{ev.description}</p>
         </Link>
       ))}
-    </main>
+    </div>
   );
 };
