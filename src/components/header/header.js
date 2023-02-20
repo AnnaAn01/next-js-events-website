@@ -27,11 +27,8 @@ export const Header = () => {
             </ul>
           </nav>
         </div>
+        <p className="title"> Sed ut perspiciatis unde omnis</p>
       </div>
-      <h1>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum,
-        autem.
-      </h1>
     </header>
   );
 };

@@ -7,7 +7,13 @@ const AllEvents = ({ data }) => {
     <div className="events_page">
       {data?.map((ev) => (
         <Link className="card" key={ev.id} href={`/events/${ev.id}`} passHref>
-          <Image src={ev.image} alt={ev.title} width={500} height={500} />{" "}
+          <Image
+            src={ev.image}
+            alt={ev.title}
+            // fill={true}
+            width={375}
+            height={375}
+          />
           <h2>{ev.title} </h2>
         </Link>
       ))}
