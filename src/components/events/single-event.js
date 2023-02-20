@@ -43,7 +43,7 @@ const SingleEvent = ({ data }) => {
       <Image src={data.image} width={1000} height={500} alt={data.title} />
       <p> {data.description} </p>
       <form onSubmit={onSubmit} className="email_registration">
-        <label> Get Registered for this event!</label>
+        <label> Register for this event!</label>
         <input
           ref={inputEmail}
           type="email"
