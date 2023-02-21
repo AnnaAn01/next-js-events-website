@@ -3,14 +3,18 @@ import { useRouter } from "next/router";
 import React, { useRef, useState } from "react";
 
 const SingleEvent = ({ data }) => {
+  // to store the value that the user has input in the input field
   const inputEmail = useRef();
+  // console.log(inputEmail);
   const router = useRouter();
+
   const [message, setMessage] = useState("");
 
   const onSubmit = async (e) => {
     e.preventDefault();
     const emailValue = inputEmail.current.value;
     const eventId = router?.query.id;
+    // console.log(emailValue);
 
     const validRegex =
       /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
@@ -25,11 +29,13 @@ const SingleEvent = ({ data }) => {
         headers: {
           "Content-Type": "application/json",
         },
+        // { email: emailValue, eventId: eventId }
         body: JSON.stringify({ email: emailValue, eventId }),
       });
 
       if (!response.ok) throw new Error(`Error: ${response.status}`);
       const data = await response.json();
+      console.log("POST", data);
       setMessage(data.message);
       inputEmail.current.value = "";
     } catch (e) {
